@@ -12,41 +12,24 @@ body {
     height: 100vh;
 }
 
-section{
-    display: block;
-    height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: end;
-}
-
 nav{
-    scroll-snap-align: start;
-    position: fixed;
-    background-color:rgba(0, 0, 139, 0.185);
-    width:100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 2rem;
+    display: inline-block;
 }
 
 nav ul li {
-    display: inline-block;
     list-style-type: none;
     margin-left: 5px;
     padding: 5px;
-    align-items: center;
+    align-self: right;
+    float: right;
 }
 
 nav ul li:hover {
     background-color: azure;
     color: rgb(25, 25, 27);
-    border-radius: 5px;    
-}
-
-.mainImg{
-    width: auto;
-    height: 100vh;
-    margin:auto;
-    float: right;
+    border-radius: 1rem;
 }
 
 a {
@@ -54,3 +37,32 @@ a {
     color: azure;
 }
 
+.gallery{
+    display: flex;
+    height: 30rem;
+    gap: 1rem;
+    background-color: azure;
+}
+
+.gallery:hover{
+    height: 50rem;
+}
+
+.gallery div{
+    flex:1;
+    border-radius: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .6s cubic-bezier cubic-bezier(0.25, 0.25, 0.25, 0.25);
+}
+
+.gallery div:hover{
+    flex: 3;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: end;
+}
